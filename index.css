@@ -80,7 +80,7 @@ hr {
     filter: contrast(50%);
 }
 
-.carousel-caption h2 {
+.carousel-caption h3 {
     color: #ffffff;
     font-size: 49px;
     text-shadow: 2px 2px 4px #555;
@@ -179,7 +179,6 @@ hr {
     padding: 10px 0px 10px 0px;
     text-align: left;
 }
-
 .gi-5x {
     position: relative;
     font-size: 5em;
@@ -209,7 +208,6 @@ hr {
     box-shadow: none;
 }
 
-
 .gi-2x{
 font-size: 2em;
 color: #000000;
@@ -236,7 +234,7 @@ text-align: center;
 .footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { 
     border-color: transparent; 
 }
-.footer-bs .footer-brand h2 { 
+.footer-bs .footer-brand h4 { 
     margin:0px 0px 10px;
     text-align: center;
     text-shadow: 2px 8px 6px rgba(0,0,0,0.2),
@@ -380,5 +378,3 @@ fieldset[disabled] .btn-default.active {
     color: #000000;
     background-color: #ffffff;
 }
-
-
