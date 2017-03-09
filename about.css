@@ -138,13 +138,23 @@ hr {
 .imageHolder .caption h3{ 
     position: absolute; 
     color: #ffffff;
-    font-size: 4em;
+    font-size: 49px;
     text-shadow: 2px 2px 4px #555;
-    text-align: center;
-    left: 40%; 
-    margin-left: -10%; /* Отступ слева */
-    margin-top: -13%; /* Отступ сверху */
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: -16%; /* Отступ сверху */
 }
+
+@media (max-width: 600px) {
+.imageHolder img {
+    position: relative;
+    margin-top: 50px;
+}
+
+ .imageHolder .caption h3{ 
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
 
 .thumbnail {
     border: none;
@@ -362,4 +372,3 @@ fieldset[disabled] .btn-default.active {
     color: #000000;
     background-color: #ffffff;
 }
-
