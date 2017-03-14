@@ -177,7 +177,10 @@ hr {
  margin-bottom: 30px;
 }
 
-
+time{
+    display: block;
+    text-align: center;
+}
 .form-control{
   display: block;
     width: 100%;
