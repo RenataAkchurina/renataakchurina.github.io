@@ -181,7 +181,15 @@ time{
     display: block;
     text-align: center;
 }
-
+.carousel-inner > .item > img {
+    position: relative; 
+    width: 100%;
+    overflow: hidden;
+    margin: auto;
+}
+#myCarousel{
+    margin-bottom: 20px;
+}
 .form-control{
   display: block;
     width: 100%;
