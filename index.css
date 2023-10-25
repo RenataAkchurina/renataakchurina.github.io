@@ -1,0 +1,540 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+*{
+  font-family: "Poppins", sans-serif;
+  background-color: #c7fee7;
+  margin: 0;
+  top: 0;
+
+}
+
+header{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 95%;
+  margin: 50px 50px 100px 50px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  background-color: #c7fee7;
+}
+
+@media only screen and (max-width: 800px) {
+header{
+  top: 0;
+  left: 0;
+  width: 95%;
+  margin: 20px 20px;
+  z-index: 1000;
+  justify-content: space-between;
+  text-decoration: none;
+  background-color: #c7fee7;
+}
+}
+
+
+@media only screen and (max-width: 600px) {
+header{
+  top: 0;
+  left: 0;
+  width: 95%;
+  margin: 20px 10px 1px 10px;
+  z-index: 1000;
+  justify-content: space-between;
+  text-decoration: none;
+  background-color: #c7fee7;
+}
+}
+
+
+@media only screen and (max-width: 400px) {
+header{
+  top: 0;
+  left: 0;
+  width: 95%;
+  margin: 10px 10px 30px 10px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  background-color: #c7fee7;
+}
+}
+
+header .logo{
+  object-fit: contain;
+  color: #f64ba9;
+  text-transform: uppercase;
+  cursor: pointer;
+
+}
+
+header .logo img{
+max-width: 13%;
+background-size: cover;
+object-fit: contain;
+}
+
+@media only screen and (max-width: 800px) {
+header .logo img{
+   max-width: 20%;
+   margin-left: 30px;
+}
+}
+
+
+@media only screen and (max-width: 500px) {
+header .logo img{
+   max-width: 30%;
+   margin-left: 0px;
+}
+}
+
+ #link{
+    text-decoration: none;
+    font-size: 1.5em;
+    color: #f64ba9;
+    padding: 0px 20px;
+ }
+
+ #link:hover{
+  opacity: 0.2;
+  cursor: pointer;
+   
+
+ }
+
+@media only screen and (max-width: 400px) {
+ #link{
+text-decoration: none;
+    font-size: 1em;
+    position: inherit;
+    color: #f64ba9;   
+}
+}
+
+
+.grid{
+  display: grid;
+  position: relative;
+  grid-template-columns: 60% 40%;
+  margin: 200px 50px 100px 50px;
+}
+
+@media only screen and (max-width: 1100px) {
+
+.grid{
+  display: grid;
+  grid-template-columns: 40% 60%;
+  margin: 120px 20px 50px 50px;
+}
+}
+
+@media only screen and (max-width: 850px) {
+
+.grid{
+  display: grid;
+  flex: wrap;
+  grid-template-columns: repeat(1, 1fr);
+  margin: 120px 20px 50px 50px;
+}
+}
+
+
+@media only screen and (max-width: 600px) {
+
+.grid{
+  display: grid;
+  grid-template-columns: 45% 65%;
+  margin: 120px 20px 50px 20px;
+}
+}
+
+@media only screen and (max-width: 500px) {
+
+.grid{
+  display: grid;
+  width: 95%;
+  grid-template-columns: repeat(1, 1fr);
+  margin: 100px 10px 0px 0px; 
+}
+}
+
+.grid-item h2{
+  font-size: 5.4em;
+  font-weight: 800;
+  color: #f64ba9;
+  display: flex;
+  position: relative;
+  padding: 0px;
+  line-height: 1em;
+  text-transform: uppercase;
+
+}
+
+@media only screen and (max-width: 1100px){
+  .grid-item h2{ 
+    font-size: 3em;
+  }
+}
+
+@media only screen and (max-width: 800px){
+  .grid-item h2{ 
+    font-size: 3em;
+  }
+}
+
+
+@media only screen and (max-width: 600px){
+  .grid-item h2{ 
+    font-size: 2em;
+  }
+}
+
+@media only screen and (max-width: 500px){
+  .grid-item h2{ 
+    font-size: 3.5em;
+    margin: 20px 10px;
+  }
+}
+
+@media only screen and (max-width: 400px){
+  .grid-item h2{ 
+    font-size: 3em;
+    margin: 20px 10px;
+  }
+}
+
+.grid-item p{ 
+  display: block;
+  
+  font-size: 1.5em;
+  color: #f64ba9;
+  padding: 0px;
+  font-weight: 400;
+}
+
+@media only screen and (max-width: 1100px){
+  .grid-item p{ 
+    margin: 20px 0px;
+    font-size: 0.9em;
+  }
+}
+
+@media only screen and (max-width: 850px){
+  .grid-item p{ 
+    margin: 20px 0px;
+    font-size: 0.7em;
+  }
+}
+
+@media only screen and (max-width: 600px){
+  .grid-item p{ 
+    margin: 20px 0px;
+    font-size: 0.9em;
+  }
+}
+
+ 
+@media only screen and (max-width: 500px){
+  .grid-item p{ 
+    margin: 20px 10px;
+    font-size: 0.9em;
+  }
+} 
+
+// ---------------------
+// bottons
+.container{
+  display: grid;
+  width: 95%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+.buttons {
+   border: 0px solid;
+   border-radius: 45px;
+   margin: 50px 0px 0px 0px;
+   width: 100%;
+  height: 100px;
+  flex: 0 1 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+@media only screen and (max-width: 850px){
+.buttons{
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+   margin: -70px 0px -15px 80px;
+  }
+    }
+
+@media only screen and (max-width: 500px){
+.buttons{
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+   margin: 15px 0px 15px 0px;
+
+  }
+    }
+
+@media only screen and (max-width: 390px){
+.buttons{
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   margin: 15px 0px 65px 0px;
+   
+  }
+    }
+
+@media only screen and (max-width: 300px){
+.buttons{
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+   margin: 15px 0px 65px 0px;
+   
+  }
+    }
+
+ .btn.btn{
+  position: relative;
+  font-size: 1.5em;
+  font-weight: 400;
+  width: 150px;
+  padding: 8px 12px;
+  margin: 5px 12px;
+  text-transform:capitalize ;
+  background: none;
+  color: #f64ba9;
+  outline: none;
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 45px;
+  border: 0px solid;
+}
+
+@media only screen and (max-width: 1100px){
+.btn.btn{
+   font-size: 0.9em;
+  }
+    }
+@media only screen and (max-width: 850px){
+.btn.btn{
+   font-size: 0.7em;
+  }
+    }
+
+@media only screen and (max-width: 500px){
+.btn.btn{
+   font-size: 0.9em;
+  }
+    }
+
+.btn:hover {
+
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    border: 1px solid;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+
+
+.grid-container {
+  display: inline-grid;
+  grid-template-columns: repeat(3, 1fr);
+  vertical-align: center;
+  margin: 0px 50px;
+  text-align: center;
+  padding: 0px;
+
+}
+
+@media only screen and (max-width: 300px) {
+  .grid-container{
+       
+       grid-template-columns: repeat(1, 1fr);
+       margin: auto;
+  }
+   }
+
+
+@media only screen and (max-width: 400px) {
+  .grid-container{
+        
+       grid-template-columns: repeat(1, 1fr);
+       margin: auto;
+  }
+   }
+
+@media only screen and (max-width: 500px) {
+  .grid-container{
+       display: flex;
+       flex-wrap: wrap;
+       grid-template-columns: repeat(1, 1fr);
+       margin: auto;
+  }
+   }
+
+@media only screen and (max-width: 600px) {
+  .grid-container{
+     
+       grid-template-columns: repeat(2, 1fr);
+       margin: auto;
+  }
+   }
+
+@media only screen and (max-width: 800px) {
+  .grid-container{
+      
+       grid-template-columns: repeat(2, 1fr);
+       
+  }
+   }
+
+@media only screen and (max-width: 1100px) {
+  .grid-container{
+  
+       grid-template-columns: repeat(2, 1fr);
+   
+  }
+   }
+
+
+
+    
+.image-item {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 5px 0px;
+  padding: 0px;
+  text-align: center;
+  color: transparent;
+  border-radius: 0px;
+
+}
+
+
+
+.image-item img{
+ width: 100%; /* Ширина изображений */
+ min-width: 500px;
+ height: 100%; /* Высота изображении */
+ object-fit: cover; /* Вписываем фотографию в область */
+ }
+
+
+
+.image-hidden {
+  display: none;
+}
+
+.image-item[data-sort='illustration'] {
+  background: #F8B195;
+}
+.image-item[data-sort='animation'] {
+  background: none;
+}
+.image-item[data-sort='sketch'] {
+  background: #C06C84;
+}
+
+.image-item[data-sort='ui'] {
+  background: #1841ff;
+}
+
+.image-item[data-sort='photo'] {
+  background: #1841ff;
+}
+
+.container-footer{
+  display: flex;
+  
+  grid-template-columns: 50% 50%;
+  with: 95%;
+  justify-content: space-between;
+  margin: 40px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+@media only screen and (max-width: 500px) {
+  .container-footer{
+      margin-left: 0px;
+    
+      
+  }
+   }
+
+
+.social ul{
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  fill: #f64ba9;
+  overflow: hidden;
+}
+
+.social li{
+  list-style: none;
+  display: inline-block;
+  margin-right: 15px;
+  fill: #f64ba9;
+}
+
+
+@media only screen and (max-width: 500px) {
+  .social ul{
+      margin-top: 0px;
+      margin-left: 0px;
+  }
+   }
+
+@media only screen and (max-width: 300px) {
+  .social{
+      margin-top: 0px;
+      
+  }
+   }
+
+.social li a:hover{
+  cursor: pointer;
+  opacity: 0.2;
+}
+
+
+
+.row{
+  position: relative;
+  display: flex;
+  color: #f64ba9;
+  margin-left: 15px;
+ }
+
+  .row p:{
+   font-size: 0.5em;
+   }
+
+@media only screen and (max-width: 500px) {
+  .row p:{
+     
+      font-size: 0,4em;
+
+      
+  }
+   }
+ 
