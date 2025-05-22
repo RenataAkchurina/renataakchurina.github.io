@@ -1,0 +1,998 @@
+
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  font-optical-sizing: auto;
+  background-color: #e5e3db;
+  color: #212125;
+  overflow-x:hidden;
+  width: 90%; /* Гарантирует, что страница не выходит за пределы экрана */
+  margin: 0;
+  top: 0;
+}
+
+
+header {
+  background-color: #e5e3db;
+  padding: 20px;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 20px;
+  border: 0.5px solid;
+  background-color: #e5e3db;
+  color: #212125;
+  cursor: pointer;
+  padding: 20px;
+  border-radius: 21px;
+}
+
+@media only screen and (max-width: 500px) {
+  #myBtn {
+  bottom: 30px;
+  right: 30px;
+  }
+   }
+
+#myBtn:hover {
+  background-color: #212125;
+  color: #e5e3db;
+}
+
+
+
+p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 500px) {
+  .logo p{
+     font-size: 16px; 
+  }
+   }
+
+
+a {  
+font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+
+
+
+/* label class for "toggle" */
+.hamburger {
+  position: fixed;
+  justify-content: center;
+  width: 50px;
+  height: 45px;
+  top: 16px;
+  right: 50%;
+  z-index: 1050;
+
+}
+
+.logo img{
+  max-width: 200px;
+  position: fixed; /* Фиксирует элемент на экране */
+  top: 13px; /* Отступ сверху */
+  right: 20px; /* Отступ слева */
+  z-index: 1000; /* Устанавливает приоритет отображения */
+}
+
+@media only screen and (max-width: 500px) {
+  .logo img{
+     left: 30px; 
+  }
+   }
+
+@media only screen and (max-width: 500px) {
+  .hamburger{
+     right: 30px; 
+  }
+   }
+
+/* div classes = "top", "meat" and "bottom" */
+.hamburger div {
+  background-color: #212125;
+  color: #f8f8f8;
+  width: 50px;
+  height: 3px;
+  border-radius: 3px;
+  margin-top: 7px;
+  transition: all 0.3s ease-in-out;
+    
+}
+
+/* input type = "checkbock" */
+#toggle {
+  display: none;
+  z-index: 1000;
+
+}
+
+#toggle:checked + .hamburger .top,
+#toggle:checked + .hamburger .meat {
+ background-color: #FFF;
+ color: #f8f8f8;;
+}
+/* burger to cross transformation */
+#toggle:checked + .hamburger .top {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  margin-top: 22.5px;
+}
+#toggle:checked + .hamburger .meat {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  margin-top: -5px;
+}
+#toggle:checked + .hamburger .bottom {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+#toggle:checked + .hamburger + .nav {
+  top: 0;
+}
+
+
+.nav {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #212125;
+  color:  #626262;
+  top: -100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  z-index: 1000;
+   
+   
+}
+.nav .nav-wrapper {
+
+  overflow-y: hidden;
+  height: 100%;
+  padding-top: 80px;
+  padding-left: 30px;
+  
+   
+}
+
+/*  whole site nav with purple background */
+nav {
+  display: flex;
+  height: 70vh;
+  background-color: #212125;
+  opacity: 1; 
+  color: #626262;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 50%;
+  overflow: hidden;
+  
+  
+}
+
+@media only screen and (max-width: 500px) {
+  nav {
+      margin-left: 0;
+      margin-right: 0;
+
+  }
+   }
+
+nav a {
+  color: #626262;
+  font-size: 4em;
+  font-weight: 700;
+  font-style: normal;
+  text-decoration: none;
+  line-height: 1em;
+}
+
+@media only screen and (max-width: 500px) {
+  nav a{   
+   font-size: 3em;
+
+  }
+   }
+
+nav a:first-child {
+  margin-top: 0;
+   
+}
+
+#toggle:checked + .hamburger + .nav .nav-wrapper nav a {
+  
+  color: #626262;
+
+}
+#toggle:checked + .hamburger + .nav .nav-wrapper nav a:hover {
+
+  color: #f8f8f8;
+}
+
+#toggle:checked + .hamburger + .nav .nav-wrapper nav a:active {
+
+  color: #f8f8f8;
+}
+
+
+
+
+
+.grid-container{
+  display: grid;
+  flex-wrap: wrap;
+  position: relative;
+  grid-template-columns: 35% 30%; /* Две равные колонки */
+  gap: 45px; /* Расстояние между колонками */
+  margin-top: 180px;
+  margin-bottom: 10px;
+  margin-left: 40%; 
+  vertical-align: top;
+  
+}
+
+@media (max-width: 500px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* Одна колонка на меньших экранах */
+    margin-top: 250px;
+    gap: 40px; /* Расстояние между колонками */
+  }
+}
+
+
+.grid-container p{
+  font-size: 20px;
+  display: grid;
+  max-width: 300px;
+  vertical-align: bottom;
+  align-items: start;
+  margin-top: 0%;
+}
+
+@media only screen and (max-width: 500px) {
+  .grid-container p{
+      margin-top: 9%;
+
+  }
+   }
+
+.name h2{
+position: relative;
+font-family: "Montserrat", sans-serif;
+font-weight: 700;
+font-optical-sizing: auto;
+line-height:  1;
+font-style: normal;
+color:  #212125;
+text-align: left;
+float: left;
+margin-top: 0px;
+margin-left: 40px;
+font-size: 6em;
+ max-width: 600px;
+  }
+
+@media only screen and (max-width: 500px) {
+  .name h2{
+      font-size: 2.4em;
+      max-width: 126px;
+      margin-left: 30px;
+      margin-top: 13%;
+
+  }
+   }
+
+
+.photo {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 54px 0px 0px 30px;
+  padding: 0px;
+  text-align: center;
+  color: transparent;
+  border-radius: 0px;
+
+}
+
+@media only screen and (max-width: 500px) {
+  .photo{
+       margin: 40px -24px 0px;
+  }
+   }
+
+.scroll-image {
+  width: 100%;
+  transition: transform 0.3s ease-out;
+  transform: scale(1); /* Исходный масштаб */
+}
+
+
+
+
+
+.grid-container img{
+display: grid;
+ display: flex;
+flex-wrap: wrap;
+width: 300px;
+border-radius: 47px;
+
+}
+
+@media only screen and (max-width: 500px) {
+  .grid-container img{
+     max-width: 80%;
+     border-radius: 25px;
+     width: 240px;
+  }  
+   }
+
+  .text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Занимает всю высоту ячейки */
+  
+}
+
+@media only screen and (max-width: 500px) {
+  .text{
+     margin-left: -20%;
+  }  
+   }
+
+  .link {
+  text-decoration: underline; /* Подчеркивание ссылки */
+  color: #212125; /* Цвет ссылки */
+  margin-top: 3%; /* Ставит ссылку внизу */ 
+  text-align: left;
+}
+
+.link:hover{
+
+  color: #007bff; /* Цвет ссылки */
+}
+
+.link:active{
+
+  color: #551A8B; /* Цвет ссылки */
+}
+
+.caption h2{
+position: relative;
+font-family: "Montserrat", sans-serif;
+font-weight: 700;
+font-optical-sizing: auto;
+line-height:  1;
+font-style: normal;
+color:  #212125;
+text-align: left;
+float: left;
+margin-left: 40px;
+display: block;
+margin-top: 140px;
+font-size: 3em;
+ max-width: 75%;
+ text-indent: 140px; /* Отступ для начала абзаца */
+ overflow: hidden;
+  }
+
+ @media only screen and (max-width: 500px) {
+  .caption h2{
+      font-size: 2.4em;
+      text-align: left;
+       text-indent: 70px; /* Отступ для начала абзаца */
+       margin-left: 30px;
+       margin-top: 70px;
+       max-width: 98%;
+       hyphens: auto; /* Автоматические переносы */
+  overflow-wrap: break-word; /* Переносы длинных слов */
+  
+  }
+}
+ 
+ .text-container{
+  font-size: 20px;
+  font-weight: 400;
+  text-align: left; /* Оставляем текст выровненным по левому краю */
+  padding-left: 17%; /* Сдвигаем его ближе к левому краю */
+  margin-top: 27%;
+  max-width: 37%;
+ 
+}
+
+@media only screen and (max-width: 500px) {
+  .text-container{
+  padding-left: 10%; /* Сдвигаем его ближе к левому краю */
+  max-width: 98%;
+
+  }
+}
+
+.link-about{
+  display: flex; 
+  padding-left: 17%; /* Сдвигаем его ближе к левому краю */
+  margin-top: 3%; 
+  }
+
+@media only screen and (max-width: 500px) {
+  .link-about{
+  padding-left: 64%; /* Сдвигаем его ближе к правому краю */
+
+  }
+}
+
+.link-about:hover{
+
+  color: #007bff; /* Цвет ссылки */
+}
+
+.link-about:active{
+
+  color: #551A8B; /* Цвет ссылки */
+}
+
+.caption1 h2{
+  font-size: 6em;
+  font-weight: 700;
+  text-align: left; /* Оставляем текст выровненным по левому краю */
+  padding-left: 17%; /* Сдвигаем его ближе к левому краю */
+  margin-top: 10%;
+  max-width: 40%;
+ 
+}
+
+.caption1 p{
+  font-size: 20px;
+  font-weight: 400;
+  text-align: left; /* Оставляем текст выровненным по левому краю */
+  padding-left: 60%; /* Сдвигаем его ближе к левому краю */
+  margin-top: -21%;
+  max-width: 28%;
+}
+
+@media only screen and (max-width: 500px) {
+  .caption1 p{
+  margin-top: 0%;
+  max-width: 98%;
+  padding-left: 30px; 
+
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .caption1 h2{
+  font-size: 2.4em;
+  padding-left: 30px; /* Сдвигаем его ближе к левому краю */
+  margin-top: 80px;
+  max-width: 80%;
+
+  }
+}
+
+.image-container {
+  display: flex;
+  justify-content: flex-end; /* Сдвигает картинку к правому краю */
+  margin-top: -28%;
+  margin-bottom: 5%;
+  padding-right: 17%; /* Сдвигаем его ближе к левому краю */
+}
+
+@media only screen and (max-width: 500px) {
+  .image-container{
+  display: flex;
+  text-align: center;
+  margin-top: 23%;
+  margin-left: 17%;
+  margin-right: 0%;
+  }
+}
+
+.image-container img {
+  max-width: 330px; /* Устанавливает максимальную ширину изображения */
+  height: auto;
+  border-radius: 45px; /* Скругление углов */
+
+}
+
+@media only screen and (max-width: 500px) {
+.image-container img {
+  max-width: 98%; /* Устанавливает максимальную ширину изображения */
+  height: auto;
+  border-radius: 25px; /* Скругление углов */
+  margin-left: 10%;
+  }
+}
+
+.link-free{
+  color: #212125;
+  display: flex; 
+  padding-left: 60%; /* Сдвигаем его ближе к левому краю */
+  margin-top: 3%; 
+}
+
+.link-free:hover{
+
+  color: #007bff; /* Цвет ссылки */
+}
+
+.link-free:active{
+
+  color: #551A8B; /* Цвет ссылки */
+}
+
+@media only screen and (max-width: 500px) {
+  .link-free{
+  display: flex;
+  margin-top: 3%;
+  margin-left: 0%;
+  margin-right: 0%;
+  }
+}
+
+
+.container {  
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 10%;
+  margin-left: 17%;
+  margin-right: 0%;
+}
+
+@media (max-width: 500px) {
+  .container {
+    margin-left: 30px;
+    margin-top: 60px;
+  }
+  }
+
+hr { 
+  width:86%; 
+  margin-bottom: 50px; 
+  margin-top: -60px;
+  margin-left: 0px;
+  border:none; 
+  height:1px; 
+  background:#212125;
+}
+
+@media only screen and (max-width: 500px) {
+  hr {
+     width: 92%; 
+     margin: 0;
+}
+  }
+
+.item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 7%;
+}
+
+@media only screen and (max-width: 500px) {
+  .item {
+    justify-content: left;
+     margin-bottom: 5%;
+     margin-top: 5%;
+
+}
+  }
+
+
+.item img {
+  width: 170px; /* Ширина изображения */
+  height: auto;
+  margin-right: 40px; /* Отступ между изображением и текстом */
+  border-radius: 33px; /* Скругление углов (опционально) */
+}
+
+
+@media only screen and (max-width: 500px) {
+  .item img{
+  width: 80px; /* Ширина изображения */
+  margin-right: 10px;
+  border-radius: 15px; /* Скругление углов (опционально) */
+}
+  }
+
+
+
+.item h2 {
+  margin: 0px 0px 0px 30px;
+  font-weight: 700;
+  font-size: 6em;
+}
+
+@media only screen and (max-width: 500px) {
+  .item h2{
+  font-size: 1.5em;
+  margin: 5px 0px 5px 20px;
+  }
+}
+
+
+  .item p {
+    text-align: center;
+  }
+}
+
+
+
+
+.table-container {
+  display: flex;
+  flex-direction: column; /* Контейнер с рядами */
+  width: 90%;
+
+}
+
+.table-row {
+  display: flex;
+  gap: 50px; /* Контролирует расстояние между элементами */
+  margin-left: 17%;
+   margin-top: 4%;
+}
+
+.table-cell1 {
+  width: 40%; /* Ширина блоков */
+  text-align: left; /* Выравнивание текста */
+  margin-top: 5%;
+}
+
+@media only screen and (max-width: 500px) {
+  .table-cell1 {
+   display: block;
+  flex-direction: column; /* Располагаем блоки вертикально */
+  width: 98%;
+  
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .table-cell1 p{
+   width: 98%;
+  
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .table-cell2 {
+   display: block;
+  flex-direction: column; /* Располагаем блоки вертикально */
+  width: 98%;
+  
+  }
+}
+
+
+
+@media only screen and (max-width: 500px) {
+  .table-row {
+  margin-top: 14%;
+  margin-bottom: 14%;
+  margin-left: 30px;
+  max-width: 98%;
+  display: block;
+  }
+}
+
+
+
+.table-cell2 a{
+  font-size: 6em;
+  font-weight: 700;
+  text-decoration: none;
+  color: #212125;
+  text-align: left;  
+}
+
+@media only screen and (max-width: 500px) {
+  .table-cell2 a{
+  font-size: 2.4em;
+  display: flex;
+  padding-top: 5px;
+
+  }
+}
+
+
+
+.table-cell2 a:hover {
+  color: #626262; /* Цвет ссылки */
+}
+
+.table-cell2 a:active{
+
+  color: #551A8B; /* Цвет ссылки */
+}
+
+
+
+.gradient-photo {
+  margin-top: 8%;
+  margin-left: 25%;
+  position: relative;
+  width: 100%;
+  max-width: 970px; /* Пример */
+}
+
+@media (max-width: 500px) {
+  .gradient-photo {
+   margin-top: 14%;
+   width: 100%;
+   margin-left: 5%;
+  }
+}
+
+.gradient-photo::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  background: linear-gradient(to top, rgba(229, 227, 219, 1) 3%, rgba(255, 255, 255, 0) 46%);
+  pointer-events: none;
+  border-radius: 50px; /* Скругление углов */
+   z-index: 1; /* Фото с градиентом */
+}
+
+@media (max-width: 500px) {
+  .gradient-photo::after {
+   border-radius: 36px; /* Скругление углов */
+  }
+}
+
+.gradient-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 75px; /* Скругление углов */
+  position: relative;
+   z-index: 1; /* Фото с градиентом */
+ 
+}
+
+@media (max-width: 500px) {
+  .gradient-photo img{
+   border-radius: 36px; /* Скругление углов */
+  }
+}
+
+
+.caption_name p{
+  font-weight: 450;
+  font-size: 20px;
+  margin-bottom: 10%;
+  margin-top: -7%;
+  margin-left: 18.3%;
+  max-width: 45%;
+  z-index: 2; /* Текст выше фото */
+  position: relative;
+}
+
+@media (max-width: 500px) {
+.caption_name p {
+   font-weight: 450;
+  font-size: 16px;
+  margin-bottom: 8%;
+  margin-top: -11%;
+  margin-left: 6.3%;
+  }
+}
+
+.caption_name h2{
+  font-weight: 700;
+  font-size: 6em;
+  margin-bottom: 10%;
+  margin-top: -10%;
+  margin-left: 18%;
+  max-width: 45%;
+  z-index: 2; /* Текст выше фото */
+  position: relative;
+}
+
+@media (max-width: 500px) {
+.caption_name h2 {
+   font-weight: 700;
+  font-size: 2em;
+  margin-bottom: 10%;
+  margin-top: -8%;
+  margin-left: 18%;
+  }
+}
+
+.caption_name1 h2{
+  font-weight: 700;
+  font-size: 6em;
+  margin-bottom: 10%;
+  margin-top: -10%;
+  margin-left: 20%;
+  max-width: 45%;
+  text-indent: 290px; /* Отступ для начала абзаца */
+  z-index: 2; /* Текст выше фото */
+  position: relative;
+}
+
+@media (max-width: 500px) {
+.caption_name1 h2 {
+   font-weight: 700;
+  font-size: 2em;
+  margin-bottom: 0%;
+  margin-top: -12%;
+  margin-left: -42%;
+  text-indent: 290px; /* Отступ для начала абзаца */
+  z-index: 2; /* Текст выше фото */
+  position: relative;
+  }
+}
+
+.footer {
+  background-color: #e5e3db;
+  color: #212125;
+  padding: 20px 10px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+  background-color: #e5e3db;
+  color: #212125;
+}
+
+@media (max-width: 500px) {
+.footer-container {
+  display: grid;
+   grid-template-columns: repeat(1, 1fr);
+    text-align: left;
+    
+  
+  }
+}
+
+
+/* Responsive Design */
+@media (max-width: 500px) {
+  .footer-container {
+    margin-left: 10%;
+    text-align: left;
+  }
+}
+
+/* Logo Section */
+.footer-logo h2{
+  margin: 0;
+  font-size: 4em;
+  color: #212125;
+}
+
+@media (max-width: 500px) {
+.footer-logo h2 {
+   font-size: 2.4em;
+   margin-bottom: 2%;
+  margin-top: 16%;
+  text-align: left;
+  }
+}
+
+.footer-logo a{
+  color: #212125;
+  font-size: 20px;
+}
+
+@media (max-width: 500px) {
+.footer-logo a {
+  margin-top: 0%;
+  margin-bottom: 0%;
+  text-align: left;
+  }
+}
+
+.footer-nav {
+ background-color: #e5e3db;
+ color: #212125;
+ font-weight: 400;
+ font-size: 20px;
+ text-decoration: underline;
+ margin-top: -50%;
+}
+
+@media (max-width: 500px) {
+.footer-nav {
+  display: grid;
+   grid-template-columns: repeat(1, 1fr);
+    text-align: left;
+   font-size: 20px;
+   margin-top: 10%;
+   margin-bottom: -120%;
+  
+   
+  
+  }
+}
+
+/* Navigation Links */
+.footer-nav ul {
+  background: #e5e3db;
+  color: #212125;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-nav li {
+  margin-bottom: 10px;
+}
+
+.footer-nav a {
+  text-decoration: underline;
+  color: #212125;
+  font-weight: 400;
+ font-size: 20px;
+}
+
+.footer-nav a:hover {
+  color: #007bff; 
+}
+
+.footer-nav a:active {
+  color: #551A8B; 
+}
+
+.footer-socials{
+  margin-top: -4%;
+
+}
+
+@media (max-width: 500px) {
+  .footer-socials{
+    margin-top: 10%;
+  }
+}
+
+
+/* Social Links */
+.footer-socials a {
+  display: block;
+  color: #212125;
+  text-decoration: underline;
+  margin-bottom: 18px;
+  font-weight: 400;
+  font-size: 20px;
+
+}
+
+.footer-socials a:hover {
+  color: #007bff; 
+}
+
+
+  .footer-nav ul, {
+    margin: -25px 30px;
+  }
+}
+

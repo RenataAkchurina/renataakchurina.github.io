@@ -1,0 +1,550 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  font-optical-sizing: auto;
+  background-color: #e5e3db;
+  color: #212125;
+  overflow-x:hidden;
+  width: 90%; /* Гарантирует, что страница не выходит за пределы экрана */
+  margin: 0;
+  top: 0;
+}
+
+
+header {
+  background-color: #e5e3db;
+  padding: 20px;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 20px;
+  border: 0.5px solid;
+  background-color: #e5e3db;
+  color: #212125;
+  cursor: pointer;
+  padding: 20px;
+  border-radius: 21px;
+}
+
+@media only screen and (max-width: 500px) {
+  #myBtn {
+  bottom: 30px;
+  right: 30px;
+  }
+   }
+
+#myBtn:hover {
+  background-color: #212125;
+  color: #e5e3db;
+}
+
+
+
+p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+a {  
+font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+
+
+
+/* label class for "toggle" */
+.hamburger {
+  position: fixed;
+  justify-content: center;
+  width: 50px;
+  height: 45px;
+  top: 16px;
+  right: 50%;
+  z-index: 1050;
+
+}
+
+.logo img{
+  max-width: 200px;
+  position: fixed; /* Фиксирует элемент на экране */
+  top: 13px; /* Отступ сверху */
+  right: 20px; /* Отступ слева */
+  z-index: 1000; /* Устанавливает приоритет отображения */
+}
+
+@media only screen and (max-width: 500px) {
+  .logo img{
+     left: 30px; 
+  }
+   }
+
+@media only screen and (max-width: 500px) {
+  .hamburger{
+     right: 30px; 
+  }
+   }
+
+/* div classes = "top", "meat" and "bottom" */
+.hamburger div {
+  background-color: #212125;
+  color: #f8f8f8;
+  width: 50px;
+  height: 3px;
+  border-radius: 3px;
+  margin-top: 7px;
+  transition: all 0.3s ease-in-out;
+    
+}
+
+/* input type = "checkbock" */
+#toggle {
+  display: none;
+  z-index: 1000;
+
+}
+
+#toggle:checked + .hamburger .top,
+#toggle:checked + .hamburger .meat {
+ background-color: #FFF;
+ color: #f8f8f8;;
+}
+/* burger to cross transformation */
+#toggle:checked + .hamburger .top {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  margin-top: 22.5px;
+}
+#toggle:checked + .hamburger .meat {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  margin-top: -5px;
+}
+#toggle:checked + .hamburger .bottom {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+#toggle:checked + .hamburger + .nav {
+  top: 0;
+}
+
+
+.nav {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #212125;
+  color:  #626262;
+  top: -100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  z-index: 1000;
+   
+   
+}
+.nav .nav-wrapper {
+
+  overflow-y: hidden;
+  height: 100%;
+  padding-top: 80px;
+  padding-left: 30px;
+  
+   
+}
+
+/*  whole site nav with purple background */
+nav {
+  display: flex;
+  height: 70vh;
+  background-color: #212125;
+  opacity: 1; 
+  color: #626262;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 50%;
+  overflow: hidden;
+  
+  
+}
+
+@media only screen and (max-width: 500px) {
+  nav {
+      margin-left: 0;
+      margin-right: 0;
+
+  }
+   }
+
+nav a {
+  color: #626262;
+  font-size: 4em;
+  font-weight: 700;
+  font-style: normal;
+  text-decoration: none;
+  line-height: 1em;
+}
+
+@media only screen and (max-width: 500px) {
+  nav a{   
+   font-size: 3em;
+
+  }
+   }
+
+nav a:first-child {
+  margin-top: 0;
+   
+}
+
+#toggle:checked + .hamburger + .nav .nav-wrapper nav a {
+  
+  color: #626262;
+
+}
+#toggle:checked + .hamburger + .nav .nav-wrapper nav a:hover {
+
+  color: #f8f8f8;
+}
+
+#toggle:checked + .hamburger + .nav .nav-wrapper nav a:active {
+
+  color: #f8f8f8;
+}
+
+
+
+
+
+
+.caption h2{
+position: relative;
+font-family: "Montserrat", sans-serif;
+font-weight: 700;
+font-optical-sizing: auto;
+line-height:  1;
+font-style: normal;
+color:  #212125;
+text-align: left;
+float: left;
+margin-left: 40px;
+display: block;
+margin-top: 150px;
+font-size: 5em;
+ max-width: 94%;
+ text-indent: 140px; /* Отступ для начала абзаца */
+ overflow: hidden;
+  }
+
+ @media only screen and (max-width: 500px) {
+  .caption h2{
+      font-size: 2.4em;
+      text-align: left;
+       text-indent: 70px; /* Отступ для начала абзаца */
+       margin-left: 30px;
+       margin-top: 70px;
+       max-width: 98%;
+       hyphens: auto; /* Автоматические переносы */
+  overflow-wrap: break-word; /* Переносы длинных слов */
+  
+  }
+}
+ 
+ .text-container{
+  font-size: 20px;
+  font-weight: 400;
+  text-align: left; /* Оставляем текст выровненным по левому краю */
+  padding-left: 17%; /* Сдвигаем его ближе к левому краю */
+  margin-top: 27%;
+  max-width: 82%;
+ 
+}
+
+@media only screen and (max-width: 500px) {
+  .text-container{
+  padding-left: 10%; /* Сдвигаем его ближе к левому краю */
+  max-width: 98%;
+
+  }
+}
+
+
+
+.gradient-photo {
+  margin-top: 8%;
+  margin-left: 25%;
+  position: relative;
+  width: 100%;
+  max-width: 970px; /* Пример */
+}
+
+@media (max-width: 500px) {
+  .gradient-photo {
+   margin-top: 14%;
+   width: 100%;
+   margin-left: 5%;
+  }
+}
+
+.gradient-photo::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  background: linear-gradient(to top, rgba(229, 227, 219, 1) 3%, rgba(255, 255, 255, 0) 46%);
+  pointer-events: none;
+  border-radius: 50px; /* Скругление углов */
+   z-index: 1; /* Фото с градиентом */
+}
+
+@media (max-width: 500px) {
+  .gradient-photo::after {
+   border-radius: 36px; /* Скругление углов */
+  }
+}
+
+.gradient-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 50px; /* Скругление углов */
+  position: relative;
+   z-index: 1; /* Фото с градиентом */
+ 
+}
+
+@media (max-width: 500px) {
+  .gradient-photo img{
+   border-radius: 36px; /* Скругление углов */
+  }
+}
+
+
+.caption_name p{
+  font-weight: 450;
+  font-size: 20px;
+  margin-bottom: 10%;
+  margin-top: -7%;
+  margin-left: 18.3%;
+  max-width: 45%;
+  z-index: 2; /* Текст выше фото */
+  position: relative;
+}
+
+@media (max-width: 500px) {
+.caption_name p {
+   font-weight: 450;
+  font-size: 16px;
+  margin-bottom: 8%;
+  margin-top: -11%;
+  margin-left: 6.3%;
+  }
+}
+
+.caption_name h2{
+  font-weight: 700;
+  font-size: 6em;
+  margin-bottom: 10%;
+  margin-top: -10%;
+  margin-left: 18%;
+  max-width: 45%;
+  z-index: 2; /* Текст выше фото */
+  position: relative;
+}
+
+@media (max-width: 500px) {
+.caption_name h2 {
+   font-weight: 700;
+  font-size: 2em;
+  margin-bottom: 10%;
+  margin-top: -8%;
+  margin-left: 18%;
+  }
+}
+
+.caption_name1 h2{
+  font-weight: 700;
+  font-size: 6em;
+  margin-bottom: 10%;
+  margin-top: -10%;
+  margin-left: 20%;
+  max-width: 45%;
+  text-indent: 290px; /* Отступ для начала абзаца */
+  z-index: 2; /* Текст выше фото */
+  position: relative;
+}
+
+@media (max-width: 500px) {
+.caption_name1 h2 {
+   font-weight: 700;
+  font-size: 2em;
+  margin-bottom: 0%;
+  margin-top: -12%;
+  margin-left: -42%;
+  text-indent: 290px; /* Отступ для начала абзаца */
+  z-index: 2; /* Текст выше фото */
+  position: relative;
+  }
+}
+
+.footer {
+  background-color: #e5e3db;
+  color: #212125;
+  padding: 20px 10px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+  background-color: #e5e3db;
+  color: #212125;
+}
+
+@media (max-width: 500px) {
+.footer-container {
+  display: grid;
+   grid-template-columns: repeat(1, 1fr);
+    text-align: left;
+    
+  
+  }
+}
+
+
+/* Responsive Design */
+@media (max-width: 500px) {
+  .footer-container {
+    margin-left: 10%;
+    text-align: left;
+  }
+}
+
+/* Logo Section */
+.footer-logo h2{
+  margin: 0;
+  font-size: 4em;
+  color: #212125;
+}
+
+@media (max-width: 500px) {
+.footer-logo h2 {
+   font-size: 2.4em;
+   margin-bottom: 2%;
+  margin-top: 16%;
+  text-align: left;
+  }
+}
+
+.footer-logo a{
+  color: #212125;
+  font-size: 20px;
+}
+
+@media (max-width: 500px) {
+.footer-logo a {
+  margin-top: 0%;
+  margin-bottom: 0%;
+  text-align: left;
+  }
+}
+
+.footer-nav {
+ background-color: #e5e3db;
+ color: #212125;
+ font-weight: 400;
+ font-size: 20px;
+ text-decoration: underline;
+ margin-top: -50%;
+}
+
+@media (max-width: 500px) {
+.footer-nav {
+  display: grid;
+   grid-template-columns: repeat(1, 1fr);
+    text-align: left;
+   font-size: 20px;
+   margin-top: 10%;
+   margin-bottom: -120%;
+  
+   
+  
+  }
+}
+
+/* Navigation Links */
+.footer-nav ul {
+  background: #e5e3db;
+  color: #212125;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-nav li {
+  margin-bottom: 10px;
+}
+
+.footer-nav a {
+  text-decoration: underline;
+  color: #212125;
+  font-weight: 400;
+ font-size: 20px;
+}
+
+.footer-nav a:hover {
+  color: #007bff; 
+}
+
+.footer-nav a:active {
+  color: #551A8B; 
+}
+
+.footer-socials{
+  margin-top: -4%;
+
+}
+
+@media (max-width: 500px) {
+  .footer-socials{
+   
+  }
+}
+
+
+/* Social Links */
+.footer-socials a {
+  display: block;
+  color: #212125;
+  text-decoration: underline;
+  margin-bottom: 18px;
+  font-weight: 400;
+  font-size: 20px;
+
+}
+
+.footer-socials a:hover {
+  color: #007bff; 
+}
+
+
+  .footer-nav ul, {
+    margin: -25px 30px;
+  }
+}
+

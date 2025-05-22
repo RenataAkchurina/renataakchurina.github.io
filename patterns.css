@@ -1,0 +1,847 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  font-optical-sizing: auto;
+  background-color: #e5e3db;
+  color: #212125;
+  overflow-x:hidden;
+  width: 94%; /* Гарантирует, что страница не выходит за пределы экрана */
+  margin: 0;
+  top: 0;
+}
+
+
+header {
+  background-color: #e5e3db;
+  padding: 20px;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 20px;
+  border: 0.5px solid;
+  background-color: #e5e3db;
+  color: #212125;
+  cursor: pointer;
+  padding: 20px;
+  border-radius: 21px;
+}
+
+@media only screen and (max-width: 500px) {
+  #myBtn {
+  bottom: 30px;
+  right: 30px;
+  }
+   }
+
+#myBtn:hover {
+  background-color: #212125;
+  color: #e5e3db;
+}
+
+
+
+p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+a {  
+font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+
+
+
+/* label class for "toggle" */
+.hamburger {
+  position: fixed;
+  justify-content: center;
+  width: 50px;
+  height: 45px;
+  top: 16px;
+  right: 50%;
+  z-index: 1050;
+
+}
+
+.logo img{
+  max-width: 200px;
+  position: fixed; /* Фиксирует элемент на экране */
+  top: 13px; /* Отступ сверху */
+  right: 20px; /* Отступ слева */
+  z-index: 1000; /* Устанавливает приоритет отображения */
+}
+
+@media only screen and (max-width: 500px) {
+  .logo img{
+     left: 30px; 
+  }
+   }
+
+@media only screen and (max-width: 500px) {
+  .hamburger{
+     right: 30px; 
+  }
+   }
+
+/* div classes = "top", "meat" and "bottom" */
+.hamburger div {
+  background-color: #212125;
+  color: #f8f8f8;
+  width: 50px;
+  height: 3px;
+  border-radius: 3px;
+  margin-top: 7px;
+  transition: all 0.3s ease-in-out;
+    
+}
+
+/* input type = "checkbock" */
+#toggle {
+  display: none;
+  z-index: 1000;
+
+}
+
+#toggle:checked + .hamburger .top,
+#toggle:checked + .hamburger .meat {
+ background-color: #FFF;
+ color: #f8f8f8;;
+}
+/* burger to cross transformation */
+#toggle:checked + .hamburger .top {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  margin-top: 22.5px;
+}
+#toggle:checked + .hamburger .meat {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  margin-top: -5px;
+}
+#toggle:checked + .hamburger .bottom {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+#toggle:checked + .hamburger + .nav {
+  top: 0;
+}
+
+
+.nav {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #212125;
+  color:  #626262;
+  top: -100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  z-index: 1000;
+   
+   
+}
+.nav .nav-wrapper {
+
+  overflow-y: hidden;
+  height: 100%;
+  padding-top: 80px;
+  padding-left: 30px;
+  
+   
+}
+
+/*  whole site nav with purple background */
+nav {
+  display: flex;
+  height: 70vh;
+  background-color: #212125;
+  opacity: 1; 
+  color: #626262;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 50%;
+  overflow: hidden;
+  
+  
+}
+
+@media only screen and (max-width: 500px) {
+  nav {
+      margin-left: 0;
+      margin-right: 0;
+
+  }
+   }
+
+nav a {
+  color: #626262;
+  font-size: 4em;
+  font-weight: 700;
+  font-style: normal;
+  text-decoration: none;
+  line-height: 1em;
+}
+
+@media only screen and (max-width: 500px) {
+  nav a{   
+   font-size: 3em;
+
+  }
+   }
+
+nav a:first-child {
+  margin-top: 0;
+   
+}
+
+#toggle:checked + .hamburger + .nav .nav-wrapper nav a {
+  
+  color: #626262;
+
+}
+#toggle:checked + .hamburger + .nav .nav-wrapper nav a:hover {
+
+  color: #f8f8f8;
+}
+
+#toggle:checked + .hamburger + .nav .nav-wrapper nav a:active {
+
+  color: #f8f8f8;
+}
+
+
+
+.name h2{
+position: relative;
+font-family: "Montserrat", sans-serif;
+font-weight: 700;
+font-optical-sizing: auto;
+line-height:  1;
+font-style: normal;
+color:  #212125;
+text-align: left;
+float: left;
+margin-top: 0px;
+margin-left: 40px;
+font-size: 6em;
+ max-width: 600px;
+  }
+
+@media only screen and (max-width: 500px) {
+  .name h2{
+      font-size: 2.4em;
+      max-width: 126px;
+      margin-left: 10px;
+      margin-top: 15%;
+      margin-bottom: 15%;
+
+  }
+   }
+
+
+
+.photo {
+ 
+  flex-wrap: wrap;
+  padding: 0px;
+  text-align: center;
+  color: transparent;
+  border-radius: 0px;
+
+}
+
+@media only screen and (max-width: 500px) {
+  .photo{
+       margin: 40px -24px 0px;
+  }
+   }
+
+
+
+.scroll-image {
+  width: 100%;
+  transition: transform 0.3s ease-out;
+  transform: scale(1); /* Исходный масштаб */
+}
+
+
+
+  .link {
+  text-decoration: underline; /* Подчеркивание ссылки */
+  color: #212125; /* Цвет ссылки */
+  margin-top: 3%; /* Ставит ссылку внизу */ 
+  text-align: left;
+}
+
+.link:hover{
+
+  color: #007bff; /* Цвет ссылки */
+}
+
+.link:active{
+
+  color: #551A8B; /* Цвет ссылки */
+}
+
+
+
+
+.caption h2{
+position: relative;
+font-family: "Montserrat", sans-serif;
+font-weight: 700;
+font-optical-sizing: auto;
+line-height:  1;
+font-style: normal;
+color:  #212125;
+text-align: left;
+float: left;
+margin-left: 50%;
+display: block;
+margin-top: -9%;
+margin-bottom: 12%;
+font-size: 2em;
+max-width: 47%;
+overflow: hidden;
+  }
+
+ @media only screen and (max-width: 500px) {
+  .caption h2{
+      font-size: 20px;
+  font-weight: 400;
+      text-align: left;
+       margin-left: 30px;
+       margin-top: -15px;
+       margin-bottom: 60px;
+       max-width: 98%;
+       hyphens: auto; /* Автоматические переносы */
+  overflow-wrap: break-word; /* Переносы длинных слов */
+  
+  }
+}
+
+
+ 
+.container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1344px;
+   
+}
+
+
+   @media (max-width: 500px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0; /* Убираем лишний отступ */
+    }
+}
+
+
+.left-content {
+    width: 14%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 7%;
+    margin-top: 13%; /* Смещает левый контент вниз */
+}
+
+
+  @media (max-width: 500px) {
+.left-content {
+        display: flex;
+        width: 77%;
+       text-align: left; 
+       margin-left: -26px;  
+       
+    }
+    }
+
+ @media (max-width: 500px) {
+.left-content h2{
+        
+        font-size: 16px;
+       text-align: left; 
+      margin-bottom: -15px;
+
+        
+    }
+    }
+
+ 
+.left-content img {
+    width: 250px;
+    margin-top: 115%;
+    border-radius: 40px;
+}
+
+ @media (max-width: 500px) {
+    .left-content img {
+       display: none;
+    }
+}
+
+
+
+.right-content {
+    width: 93%;
+    text-align: right;
+
+}
+
+@media (max-width: 500px) {
+    .right-content {
+     order: -1; /* Ставим фото первым */    
+        
+    }
+}
+
+
+
+.right-content img {
+ display: block; /* Оставляем один раз */
+    max-width: 1800px;
+    border-radius: 100px;
+     margin-left: 41%;  
+      
+    
+}
+
+@media (max-width: 500px) {
+    .right-content img {
+        border-radius: 25px;
+        margin-left: 13%; /* Центрируем картинку */
+        width: 82%; /* Делаем адаптивной */
+    }
+}
+-------------------------------------------
+
+.main-container {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: space-between;
+
+}
+
+.text-section {
+  width: 57%;
+  margin-left: 4%;
+  margin-top: 10%;
+}
+
+.text-section h2 {
+  
+  font-size: 4em;
+  margin: 0 0 20px 0; /* чуть больше отступ снизу заголовка */
+}
+
+.columns {
+   column-count: 2; /* Две колонки */
+  column-gap: 20px; /* Расстояние между колонками */
+ margin-top: 10%;
+}
+
+@media (max-width: 600px) {
+  .columns {
+    column-count: 1;
+  }
+}
+
+.columns p {
+ margin: 0 0 10px 0; /* убираем верхний отступ, оставляем только снизу */
+  
+}
+
+.umsatzsteuer p{
+  font-size: 13px;
+  color: #626262;
+}
+
+.buy-link {
+  display: inline-block;
+  
+  color: #212125;
+  display: flex; 
+  padding-left: 51%; /* Сдвигаем его ближе к левому краю */
+  margin-top: 3%; 
+}
+
+.buy-link:hover {
+   color: #007bff; /* Цвет ссылки */
+}
+
+.link-free:active{
+
+  color: #551A8B; /* Цвет ссылки */
+}
+
+@media only screen and (max-width: 500px) {
+  .link-free{
+  display: flex;
+  margin-top: 3%;
+  margin-left: 0%;
+  margin-right: 0%;
+  }
+}
+
+.carousel {
+  overflow: hidden;
+  width: 37%;
+  max-width: 410px;
+  margin-left: 70%;
+  margin-top: -37%;
+  position: relative;
+
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-track img {
+  width: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
+  border-radius: 60px;
+}
+
+
+@media (max-width: 500px) {
+  .main-container {
+    flex-direction: column-reverse; /* меняет порядок: сначала карусель, потом текст */
+    display: flex;
+    padding: 0 15px;
+    margin-top: 16%;
+    margin-left: 3%;
+    gap: 30px;
+  }
+
+  .text-section { 
+    width: 100%;
+    margin: 0;
+  }
+
+  .text-section h2{
+    
+   font-size: 2.4em;
+  }
+
+
+  .columns {
+    column-count: 1;
+    margin-top: 20px;
+  }
+
+  .carousel {
+    width: 100%;
+    margin-top: 14%;
+    margin-left: 3%;
+    max-width: none;
+  }
+
+  .carousel-track img {
+    border-radius: 30px;
+  }
+
+  .buy-link {
+    display: block;
+    margin-top: 20px;
+    font-size: 1.1em;
+    color: #000;
+    text-decoration: underline;
+  }
+}
+------------------------------------------------------------------
+.main-container{
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.carousel2 {
+  overflow: hidden;
+  width: 37%;
+  max-width: 400px;
+  margin-left: 8%;
+  margin-top: 10%;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-track img {
+  width: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
+  border-radius: 60px;
+}
+
+.text-section2 {
+  width: 57%;
+  margin-left: 36%;
+  margin-top: -38%;
+}
+
+.text-section2 h2 {
+  font-size: 4em;
+  margin: 0 0 20px 0;
+}
+
+.columns {
+  column-count: 2;
+  column-gap: 20px;
+  margin-top: 10%;
+}
+
+.columns p {
+  margin: 0 0 10px 0;
+}
+
+.umsatzsteuer p{
+  font-size: 13px;
+  color: #626262;
+}
+
+.buy-link {
+  display: inline-block;
+  color: #212125;
+  display: flex;
+  padding-left: 51%;
+  margin-top: 3%;
+}
+
+.buy-link:hover {
+  color: #007bff;
+}
+
+.link-free:active {
+  color: #551A8B;
+}
+
+@media (max-width: 500px) {
+  .main-container {
+    flex-direction: column;
+    padding: 0px;
+    margin-left: 30px;
+    margin-top: 16%;
+    gap: 30px;
+  }
+
+  /* Общий стиль для обеих каруселей */
+  .carousel,
+  .carousel2 {
+    width: 100%;
+    margin: 0 auto;
+    max-width: none;
+    order: 1; /* Ставим первым */
+  }
+
+  .carousel-track img {
+    border-radius: 40px;
+
+  }
+
+  .text-section,
+  .text-section2 {
+    width: 100%;
+    margin: 0;
+    order: 2; /* Ставим после изображения */
+  }
+
+  .text-section h2,
+  .text-section2 h2 {
+    font-size: 2.4em;
+    margin-bottom: 20px;
+  }
+
+  .columns {
+    column-count: 1;
+    margin-top: 20px;
+  }
+
+  .buy-link {
+    display: block;
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #000;
+    text-decoration: underline;
+    padding-left: 0;
+  }
+}
+
+
+
+
+.footer {
+  background-color: #e5e3db;
+  color: #212125;
+  padding: 20px 10px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin-top: 14%;
+  margin-left: 17%;
+  align-items: center;
+  background-color: #e5e3db;
+  color: #212125;
+}
+
+@media (max-width: 500px) {
+.footer-container {
+  display: grid;
+   grid-template-columns: repeat(1, 1fr);
+    text-align: left;
+    
+  
+  }
+}
+
+
+/* Responsive Design */
+@media (max-width: 500px) {
+  .footer-container {
+    margin-left: 10%;
+    text-align: left;
+  }
+}
+
+/* Logo Section */
+.footer-logo h2{
+  margin: 0;
+  font-size: 4em;
+  color: #212125;
+}
+
+@media (max-width: 500px) {
+.footer-logo h2 {
+   font-size: 2.4em;
+   margin-bottom: 2%;
+  margin-top: 16%;
+  text-align: left;
+  }
+}
+
+.footer-logo a{
+  color: #212125;
+  font-size: 20px;
+}
+
+@media (max-width: 500px) {
+.footer-logo a {
+  margin-top: 0%;
+  margin-bottom: 0%;
+  text-align: left;
+  }
+}
+
+.footer-nav {
+ background-color: #e5e3db;
+ color: #212125;
+ font-weight: 400;
+ font-size: 20px;
+ text-decoration: underline;
+ margin-top: -50%;
+}
+
+@media (max-width: 500px) {
+.footer-nav {
+  display: grid;
+   grid-template-columns: repeat(1, 1fr);
+    text-align: left;
+   font-size: 20px;
+   margin-top: 10%;
+   margin-bottom: -120%;
+  
+   
+  
+  }
+}
+
+/* Navigation Links */
+.footer-nav ul {
+  background: #e5e3db;
+  color: #212125;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-nav li {
+  margin-bottom: 10px;
+}
+
+.footer-nav a {
+  text-decoration: underline;
+  color: #212125;
+  font-weight: 400;
+ font-size: 20px;
+}
+
+.footer-nav a:hover {
+  color: #007bff; 
+}
+
+.footer-nav a:active {
+  color: #551A8B; 
+}
+
+.footer-socials{
+  margin-top: -4%;
+
+}
+
+@media (max-width: 500px) {
+  .footer-socials{
+   margin-top: 10%;
+  }
+}
+
+
+/* Social Links */
+.footer-socials a {
+  display: block;
+  color: #212125;
+  text-decoration: underline;
+  margin-bottom: 18px;
+  font-weight: 400;
+  font-size: 20px;
+
+}
+
+.footer-socials a:hover {
+  color: #007bff; 
+}
+
+
+  .footer-nav ul, {
+    margin: -25px 30px;
+  }
+}
+
