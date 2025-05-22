@@ -1,0 +1,82 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  font-optical-sizing: auto;
+  background-color: #e5e3db;
+  color: #212125;
+  overflow-x:hidden;
+  width: 90%; /* Гарантирует, что страница не выходит за пределы экрана */
+  margin-top: 10%;
+  
+}
+
+ @media (max-width: 500px) {
+body {
+ margin-top: 40%;
+  }
+}
+
+
+p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+
+}
+
+.main-link{  
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  text-decoration: underline; /* Подчеркивание ссылки */
+  color: #212125; /* Цвет ссылки */
+  margin-bottom: 10%;
+  margin-left: 10%;
+
+}
+
+.main-link:hover{
+
+  color: #007bff; /* Цвет ссылки */
+}
+
+.main-link:active{
+
+  color: #551A8B; /* Цвет ссылки */
+}
+
+ @media (max-width: 500px) {
+.main-link {
+  
+  margin-left: 10%;
+  
+  }
+}
+
+h2{
+font-family: "Montserrat", sans-serif;
+font-weight: 700;
+font-style: normal;
+color:  #212125;
+font-size: 4em;
+The font-optical-sizing: auto; 
+text-align: center;
+justify-content: center;
+max-width: 70%;
+margin-left: 20%;
+
+  }
+
+  @media (max-width: 500px) {
+h2 {
+  
+  font-size: 40px;
+  margin-left: 22%;
+  text-align: center;
+  }
+}
